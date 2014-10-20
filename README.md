@@ -17,7 +17,7 @@ How it works
 
 As an example, consider this dataset:
 
-```
+```python
 columns = ['id', 'username', 'url_id', 'url', 'tag_id', 'tag']
 data = [
         [ 1, 'albi', 1, 'http://python.org/', 1, 'programming language' ],
@@ -31,13 +31,13 @@ data = [
 
 If you import tablette and feed it with the columns and data:
 
-```
+```python
 t = tablette(columns, data)
 ```
 
 you get this nice data structure:
 
-```
+```python
 {
     'list': [{
         'id': 1,
@@ -94,10 +94,6 @@ But it's more likely that you need something more advanced. That's why you can
 pass a third parameter named `mapping` to the parsing function.
 In the previous example, mapping would have been:
 
-```
+```python
 mapping = { 'id': 'users_list', 'url_id': 'urls_list', 'tag_id': 'tags_list' }
 ```
-
-want to specify the groups and
-
-
