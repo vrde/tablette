@@ -8,8 +8,8 @@ lists of dicts.
 Why
 ===
 
-The purpose of the module is to create JSON data starting from a database
-cursor. Yes. A database cursor, do you remember that? :)
+The purpose of the module is to make it easy to create JSON data starting
+from a database cursor. Yes. A database cursor, do you remember that? :)
 
 
 How it works
@@ -35,7 +35,7 @@ If you import tablette and feed it with the columns and data:
 t = tablette(columns, data)
 ```
 
-you get this nice data structure:
+Then you'll get this nice data structure:
 
 ```python
 {
