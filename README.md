@@ -92,8 +92,25 @@ normal behaviour, and it works for simple cases. **tablette** then substitutes
 the `id` part of the name with `list`.
 But it's more likely that you need something more advanced. That's why you can
 pass a third parameter named `mapping` to the parsing function.
-In the previous example, mapping would have been:
+In the previous example, a better and more semantic mapping would have been:
 
 ```python
-mapping = { 'id': 'users_list', 'url_id': 'urls_list', 'tag_id': 'tags_list' }
+mapping = { 'id': 'users', 'url_id': 'urls', 'tag_id': 'tags' }
+```
+
+Leading to the following dict (please note how the root element is now
+named `users`, `url_list` is now `urls`, and `tag_list` is now `tags`)
+
+```python
+{
+    'users': [{
+        'id': 1,
+        'username': 'albi'
+        'urls': [{
+            'url': 'http://python.org/',
+            'url_id': 1
+            'tags': [{
+                'tag': 'programming language',
+                'tag_id': 1
+            [ ... ]
 ```
